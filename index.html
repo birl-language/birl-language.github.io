@@ -18,6 +18,12 @@
 
   <meta prefix="og: http://ogp.me/ns#" property='og:site_name' content='BIRL' />
 
+  <meta property="og:url"           content="https://birl-language.github.io" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="BIRL - Bambam's 'It's show time' Recursive Language" />
+  <meta property="og:description"   content="Vem cumpade! Sai de casa codei pra caralho! BIRL!" />
+  <meta property="og:image"         content="https://birl-language.github.io/images/birl2.png" />
+
   <!-- core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -40,6 +46,15 @@
 
 <body id="home" class="homepage" ng-app="workSite">
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.6&appId=362013387327951";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 
   <section id="upcoming" ng-controller="proxCtrl">
     <div class="container">
@@ -56,7 +71,7 @@
           O BIRL <span class="italic">(<span class="red">B</span>ambam's "<span class="red">I</span>t's show time" <span class="red">R</span>ecursive <span class="red">L</span>anguage)</span> é a linguagem de programação mais treze já inventada. <br><span class="highlight">Deve ser utilizada apenas por quem realmente constrói fibra e não é água com código. É uma linguagem extremamente simples porém com poder para derrubar todas as árvores do parque Ibirapuera. </span><br>Programando em BIRL, é verão o ano todo!
         </p>
       </div>
-
+      <div class="fb-like" data-href="https://birl-language.github.io" data-width="800" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
   </section><!--HOME-->
 
 
