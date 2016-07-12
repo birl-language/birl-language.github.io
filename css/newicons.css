@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'logos-2';
+    src:    url('../fonts/logos-2.eot?hwxyx3');
+    src:    url('../fonts/logos-2.eot?hwxyx3#iefix') format('embedded-opentype'),
+        url('../fonts/logos-2.ttf?hwxyx3') format('truetype'),
+        url('../fonts/logos-2.woff?hwxyx3') format('woff'),
+        url('../fonts/logos-2.svg?hwxyx3#logos-2') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon2-"], [class*=" icon2-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'logos-2' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a[class^="icon2-"], a[class*=" icon2-"], span[class^="icon2-"], span[class*=" icon2-"], small[class^="icon2-"], small[class*=" icon2-"] {
+    display: -moz-inline-stack;
+    display:inline-block;
+    zoom: 1;
+    *display: inline;
+}
+
+.icon2-worklab:before {
+    content: "\e904";
+}
+.icon2-prog-ionic:before {
+    content: "\e900";
+}
+.icon2-prog-laravel:before {
+    content: "\e901";
+}
+.icon2-prog-cordova:before {
+    content: "\e902";
+}
+.icon2-prog-swift:before {
+    content: "\e903";
+}
+
