@@ -887,6 +887,10 @@ font-size: 17px;
     background-color: #9e1912;
 }
 
+#upcoming {
+    padding-bottom: 30px !important;
+}
+
 @media(max-width: 768px) {
     .row-eq-height {
         -webkit-box-orient: vertical;
