@@ -891,6 +891,46 @@ font-size: 17px;
     padding-bottom: 30px !important;
 }
 
+.console{
+    border: 1px solid #ddd;
+border-radius: 10px;
+background-color: #fff;
+}
+
+#editor{
+    position: static;
+    height: 500px;
+}
+
+.ace_gutter{
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.nopadding {
+    padding: 0;
+}
+
+.exit {
+    padding: 15px;
+font-size: 18px;
+color: #a11913;
+}
+
+.entrance textarea{
+    width: 100%;
+resize: none;
+border: 0;
+font-size: 18px;
+padding: 15px;
+}
+
+.btn.btn-danger {
+    font-size:20px;
+padding-left: 70px;
+padding-right: 70px;
+}
+
 @media(max-width: 768px) {
     .row-eq-height {
         -webkit-box-orient: vertical;

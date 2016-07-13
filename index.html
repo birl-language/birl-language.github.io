@@ -72,6 +72,33 @@
         </p>
       </div>
       <div class="fb-like" data-href="https://birl-language.github.io" data-width="800" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+
+
+      <div class="row console">
+        <div class="col-xs-12 col-sm-6">
+          <div id="editor">HORA DO SHOW
+    CE QUER VER ESSA PORRA? ("Hello, World! Porra!");
+BIRL
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 nopadding">
+          <div class="title title-right">
+            Entrada
+          </div>
+          <div class="entrance">
+            <textarea>Oi</textarea>
+          </div>
+          <div class="title">
+            <button class="btn btn-danger btn-large">Bora!</button>
+          </div>
+          <div class="title">
+            Saída
+          </div>
+          <div class="exit">
+            Olá!
+          </div>
+        </div>
+      </div>
   </section><!--HOME-->
 
 
@@ -103,7 +130,7 @@
                   <div class="code">
                       <p>
                           <br>
-                          <span class="red">CE QUER VER ESSA PORRA?</span> ("Hello, Mutant")<span class="red">;</span>
+                          <span class="red">CE QUER VER ESSA PORRA?</span> ("Hello, Mutante")<span class="red">;</span>
                           <br>
                           <br>
                       </p>
@@ -301,6 +328,14 @@
       </div>
     </div>
   </footer>
+
+<script src="src/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.getSession().setMode("ace/mode/birl");
+</script>
+
 
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
