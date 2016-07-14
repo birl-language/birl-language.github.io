@@ -75,7 +75,7 @@ var birlHighlightRules = function() {
     var bambamRegex = "(?:\\s*|)(?:AJUDA O MALUCO TA DOENTE|BIRL|HORA DO SHOW|BORA CUMPADE|ELE QUE A GENTE QUER\\?|"+
     "NAO VAI DAR NAO|OH O HOME AI PO|NEGATIVA BAMBAM|MAIS QUERO MAIS)";
     
-    var printsBambam = "\\s*(?:CE QUER VER ESSA PORRA\\?|QUE QUE SE QUER MONSTRAO\\?)";
+    var printsBambam = "\\s*(?:CE QUER VER ESSA PORRA\\?|QUE QUE CE QUER MONSTRAO\\?)";
 
     var keywordMapper = this.$keywords = this.createKeywordMapper({
         "keyword.control" : keywordControls,
