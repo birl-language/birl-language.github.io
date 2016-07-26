@@ -897,9 +897,10 @@ border-radius: 10px;
 background-color: #fff;
 }
 
-#editor{
+.editor{
     position: static;
     height: 500px;
+    border-radius: 9px 0 0 9px;
 }
 
 .ace_gutter{
@@ -914,7 +915,11 @@ background-color: #fff;
 .exit {
     padding: 15px;
 font-size: 18px;
-color: #a11913;
+color: #666;
+}
+
+.exit.error {
+    color: #a11913;
 }
 
 .entrance textarea{

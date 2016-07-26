@@ -44,7 +44,7 @@
   <link rel="shortcut icon" href="images/favicon.ico">
 </head>
 
-<body id="home" class="homepage" ng-app="workSite">
+<body id="home" class="homepage" ng-app="birlWeb">
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -56,7 +56,7 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 
-  <section id="upcoming" ng-controller="proxCtrl">
+  <section id="upcoming" ng-controller="birlCtrl">
     <div class="container">
       <div class="row">
           <div class="col-xs-12 col-sm-6 col-sm-offset-3 center-wrap">
@@ -73,10 +73,8 @@
       </div>
 
       <div class="row console">
-        <div class="col-xs-12 col-sm-6">
-          <div id="editor">HORA DO SHOW
-    CE QUER VER ESSA PORRA? ("Hello, World! Porra!");
-BIRL
+        <div class="col-xs-12 col-sm-6 nopadding">
+          <div class="editor" ui-ace="{useWrapMode : true,showGutter: true,theme:'monokai',mode: 'birl'}" ng-model="code">
           </div>
         </div>
         <div class="col-xs-12 col-sm-6 nopadding">
@@ -84,16 +82,16 @@ BIRL
             Entrada
           </div>
           <div class="entrance">
-            <textarea>Oi</textarea>
+            <textarea ng-model="stdin" placeholder="BIRL!"></textarea>
           </div>
           <div class="title">
-            <button class="btn btn-danger btn-large">Bora!</button>
+            <button class="btn btn-danger btn-large" ng-click="sendBirl()">Bora!</button>
           </div>
           <div class="title">
             Saída
           </div>
-          <div class="exit">
-            Olá!
+          <div class="exit" ng-class="{'error' : temErro}">
+            {{stdout}}
           </div>
         </div>
       </div>
@@ -330,23 +328,12 @@ BIRL
     </div>
   </footer>
 
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular/controllers.js"></script>
 <script src="src/ace.js" type="text/javascript" charset="utf-8"></script>
-<script>
-    var editor = ace.edit("editor");
-    editor.setTheme("ace/theme/monokai");
-    editor.getSession().setMode("ace/mode/birl");
-</script>
-
-
+  <script src="js/ui-ace.js"></script>
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.prettyPhoto.js"></script>
-  <script src="js/moment.min.js"></script>
-  <script src="js/moment-pt-br.js"></script>
-  <script src="js/angular.min.js"></script>
-  <script src="js/angular-translate.min.js"></script>
-  <script src="js/flex-calendar.js"></script>
-  <script src="js/angular/controllers.js"></script>
 
 
 </body>
