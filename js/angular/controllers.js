@@ -6,7 +6,7 @@ var app = angular.module("birlWeb", ['ui.ace']);
 app.controller("birlCtrl", function($scope, birlService) {
     $scope.stdin = "";
     $scope.stdout = "";
-    $scope.code = "HORA DO SHOW\n    CE QUER VER ESSA PORRA? (\"Hello, World! Porra!\\n\");\nBIRL";
+    $scope.code = "HORA DO SHOW\n    CE QUER VER ESSA PORRA? (\"Hello, World! Porra!\\n\");\n    BORA CUMPADE 0;\nBIRL";
     $scope.temErro = false;
 
     $scope.sendBirl = function(){
@@ -31,7 +31,7 @@ app.controller("birlCtrl", function($scope, birlService) {
 app.service("birlService", function($http, $q) {
     this.runBirl = function(code, stdin){
         var deferred = $q.defer();
-        $http.post("https://latexxbot.noip.me:13666/compile", {code: code, stdin: stdin }).then(function(data){
+        $http.post("https://birl.herokuapp.com/compile", {code: code, stdin: stdin }).then(function(data){
             if(data.error != "") {
                 deferred.reject("compile-error");
             } else {
