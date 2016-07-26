@@ -31,7 +31,7 @@ app.controller("birlCtrl", function($scope, birlService) {
 app.service("birlService", function($http, $q) {
     this.runBirl = function(code, stdin){
         var deferred = $q.defer();
-        $http.post("http://latexxbot.noip.me:13666/compile", {code: code, stdin: stdin }).then(function(data){
+        $http.post("https://latexxbot.noip.me:13666/compile", {code: code, stdin: stdin }).then(function(data){
             if(data.error != "") {
                 deferred.reject("compile-error");
             } else {
