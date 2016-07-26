@@ -4,12 +4,16 @@ var app = angular.module("birlWeb", ['ui.ace']);
 //CONTROLLERS
 
 app.controller("birlCtrl", function($scope, birlService) {
+    $scope.disabled = false;
+    $scope.btText = "Bora!";
     $scope.stdin = "";
     $scope.stdout = "";
     $scope.code = "HORA DO SHOW\n    CE QUER VER ESSA PORRA? (\"Hello, World! Porra!\\n\");\n    BORA CUMPADE 0;\nBIRL";
     $scope.temErro = false;
 
     $scope.sendBirl = function(){
+        $scope.disabled = true;
+        $scope.btText = "Buscando...";
         $scope.temErro = false;
         $scope.stdout = "";
         birlService.runBirl($scope.code, $scope.stdin).then(function(data){
@@ -21,6 +25,9 @@ app.controller("birlCtrl", function($scope, birlService) {
                 $scope.stdout = "ERRO DE COMPILAÇÃO CUMPADE";
             }
             $scope.temErro = true;
+        }).finally(function(){
+            $scope.disabled = false;
+            $scope.btText = "Bora!";
         });
     }
 
@@ -31,7 +38,8 @@ app.controller("birlCtrl", function($scope, birlService) {
 app.service("birlService", function($http, $q) {
     this.runBirl = function(code, stdin){
         var deferred = $q.defer();
-        $http.post("https://birl.herokuapp.com/compile", {code: code, stdin: stdin }).then(function(data){
+        $http.post("https://birl.herokuapp.com/compile", {code: code, stdin: stdin }).then(function(response){
+            data = response.data;
             if(data.error) {
                 deferred.reject("compile-error");
             } else {

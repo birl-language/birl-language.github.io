@@ -85,7 +85,7 @@
             <textarea ng-model="stdin" placeholder="BIRL!"></textarea>
           </div>
           <div class="title">
-            <button class="btn btn-danger btn-large" ng-click="sendBirl()">Bora!</button>
+            <button class="btn btn-danger btn-large" ng-click="sendBirl()" ng-disabled="disabled">{{btText}}</button>
           </div>
           <div class="title">
             Saída
