@@ -32,7 +32,7 @@ app.service("birlService", function($http, $q) {
     this.runBirl = function(code, stdin){
         var deferred = $q.defer();
         $http.post("https://birl.herokuapp.com/compile", {code: code, stdin: stdin }).then(function(data){
-            if(data.error != "") {
+            if(data.error) {
                 deferred.reject("compile-error");
             } else {
                 deferred.resolve(data.stdout);
