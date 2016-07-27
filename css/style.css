@@ -943,8 +943,13 @@ padding-left: 70px;
 padding-right: 70px;
 }
 
-.fb-comments{
-    margin: 0 auto;
+.fb-container{
+    text-align: center;
+}
+
+.fb-comments.fb-iframe-widget{
+    border: 1px solid #ccc;
+    border-radius: 10px;
 }
 
 @media(max-width: 768px) {
