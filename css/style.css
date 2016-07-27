@@ -859,6 +859,11 @@ border-bottom: 1px solid #ccc;
 
 }
 
+.title.bottom {
+    border: 0;
+    border-bottom-right-radius: 9px;
+}
+
 .code {
     padding:10px;
 padding-left: 30px;
@@ -916,6 +921,8 @@ background-color: #fff;
     padding: 15px;
 font-size: 18px;
 color: #444;
+height: 189px;
+overflow-y: scroll;
 }
 
 .exit.error {
@@ -930,10 +937,14 @@ font-size: 18px;
 padding: 15px;
 }
 
-.btn.btn-danger {
+.btn {
     font-size:20px;
 padding-left: 70px;
 padding-right: 70px;
+}
+
+.fb-comments{
+    margin: 0 auto;
 }
 
 @media(max-width: 768px) {

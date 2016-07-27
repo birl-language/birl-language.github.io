@@ -1,9 +1,13 @@
 var app = angular.module("birlWeb", ['ui.ace']);
 
 
+app.config(['$compileProvider', function ($compileProvider) {
+    $compileProvider.aHrefSanitizationWhitelist(/^\s*(|blob|):/);
+}]);
+
 //CONTROLLERS
 
-app.controller("birlCtrl", function($scope, birlService) {
+app.controller("birlCtrl", function($scope, $window, birlService) {
     $scope.disabled = false;
     $scope.btText = "Bora!";
     $scope.stdin = "";
@@ -30,6 +34,15 @@ app.controller("birlCtrl", function($scope, birlService) {
             $scope.btText = "Bora!";
         });
     }
+
+    var blob;
+
+    //observar o codigo e alterar o blob
+    $scope.$watch('code', function() {
+        blob = new Blob([$scope.code], { type: 'text/plain' }),
+        url = $window.URL || $window.webkitURL;
+        $scope.fileUrl = url.createObjectURL(blob);
+    });
 
 });
 

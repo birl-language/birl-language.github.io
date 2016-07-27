@@ -24,6 +24,9 @@
   <meta property="og:description"   content="Vem cumpade! Sai de casa codei pra caralho! BIRL!" />
   <meta property="og:image"         content="https://birl-language.github.io/images/birl2.png" />
 
+  <meta property="fb:admins" content="100002158398392"/>
+  <meta property="fb:admins" content="100002144931535"/>
+
   <!-- core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -92,6 +95,9 @@
           </div>
           <div class="exit" ng-class="{'error' : temErro}">
             {{stdout}}
+          </div>
+          <div class="title bottom">
+            <a class="btn btn-danger btn-large" ng-href="{{ fileUrl }}" download="codigo.birl"><span class="fa fa-cloud-download"></span> Tirar da Jaula</a>
           </div>
         </div>
       </div>
@@ -305,6 +311,18 @@
     </div>
   </section>
 
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title text-center wow fadeInDown">Galera do Canal</h2>
+        <p class="text-center wow fadeInDown">
+          Deixe seu comentário sobre esta linguagem descendente maravilhosa:
+        </p>
+      </div>
+      <div class="fb-comments" data-href="https://birl-language.github.io" data-width="600" data-numposts="5"></div>
+    </div>
+  </section>
+
   <footer id="footer">
     <div id="footer_inside">
       <div class="container">
@@ -320,6 +338,7 @@
                   <i class="fa fa-github"></i>
                 </a>
               </li>
+              v1.1
             </ul>
           </div>
 
