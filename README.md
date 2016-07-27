@@ -12,7 +12,7 @@ Website: https://birl-language.github.io/
 Servidor: https://github.com/birl-language/birl-server  
 
 ##TO-DO
-- [ ] Ajeitar layout no mobile
+- [X] Ajeitar layout no mobile
 - [ ] Melhorar o tutorial para quem nunca programou
 - [ ] Deixar o compilador mais compreensivo com os programadores mais frangos
 - [ ] Aumentar a sintaxe pra ficar o mais longe possível dessa linguagem de quem sobe em árvore (C).
