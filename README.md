@@ -10,15 +10,18 @@ Tanto a linguagem quanto o site são código aberto! Queremos fazer o ambiente d
 A sintaxe pode ser encontrada direto no site! Puta rolê escrever aqui também!
 
 ##TO-DO
-- [ ] Adicionar opção de baixar um arquivo .birl com o código
-- [ ] Adicionar algum jeito de deixar comentários na página (sei lá como)
+- [X] Adicionar opção de baixar um arquivo .birl com o código
+- [X] Adicionar algum jeito de deixar comentários na página (sei lá como)
 - [ ] Deixar o compilador mais compreensivo com os programadores mais frangos
 - [ ] Aumentar a sintaxe pra ficar o mais longe possível dessa linguagem de quem sobe em árvore (C).
 
   
-**Versão atual:** 1.0
+##Colaboradores  
   
-  
-by RCzera (@akafts) e Padilha Monster (@lcfpadilha). **BIRL!**
+- **RCzera (@akafts)**
+- **Padilha Monster (@lcfpadilha)**
+- Lucas Santos (@lucasmoreira)
 
-*Inspirado pela linguagem ArnoldC: https://github.com/lhartikk/ArnoldC/wiki/ArnoldC*
+*Inspirado pela linguagem ArnoldC: https://github.com/lhartikk/ArnoldC/wiki/ArnoldC*. **BIRL!**
+
+*Versão atual:* 1.1
