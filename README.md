@@ -7,11 +7,13 @@ BIRL é a primeira linguagem totalmente mutante do mundo! Ela é baseada em C e 
 Tanto a linguagem quanto o site são código aberto! Queremos fazer o ambiente de programação mais treze possível! Segura a gente!
 
 ## Sintaxe
-A sintaxe pode ser encontrada direto no site! Puta rolê escrever aqui também!
+A sintaxe pode ser encontrada direto no site! Puta rolê escrever aqui também!  
+Website: https://birl-language.github.io/  
+Servidor: https://github.com/birl-language/birl-server  
 
 ##TO-DO
-- [X] Adicionar opção de baixar um arquivo .birl com o código
-- [X] Adicionar algum jeito de deixar comentários na página (sei lá como)
+- [ ] Ajeitar layout no mobile
+- [ ] Melhorar o tutorial para quem nunca programou
 - [ ] Deixar o compilador mais compreensivo com os programadores mais frangos
 - [ ] Aumentar a sintaxe pra ficar o mais longe possível dessa linguagem de quem sobe em árvore (C).
 
@@ -20,7 +22,6 @@ A sintaxe pode ser encontrada direto no site! Puta rolê escrever aqui também!
   
 - **RCzera (@akafts)**
 - **Padilha Monster (@lcfpadilha)**
-- Lucas Santos (@lucasmoreira)
 
 *Inspirado pela linguagem ArnoldC: https://github.com/lhartikk/ArnoldC/wiki/ArnoldC*. **BIRL!**
 
