@@ -20,3 +20,5 @@ A sintaxe pode ser encontrada direto no site! Puta rolê escrever aqui também!
   
   
 by RCzera (@akafts) e Padilha Monster (@lcfpadilha). **BIRL!**
+
+*Inspirado pela linguagem ArnoldC: https://github.com/lhartikk/ArnoldC/wiki/ArnoldC*
