@@ -22,6 +22,7 @@ Servidor: https://github.com/birl-language/birl-server
   
 - **RCzera (@akafts)**
 - **Padilha Monster (@lcfpadilha)**
+- E toda a comunidade codebuilder do Brasil
 
 *Inspirado pela linguagem ArnoldC: https://github.com/lhartikk/ArnoldC/wiki/ArnoldC*. **BIRL!**
 
