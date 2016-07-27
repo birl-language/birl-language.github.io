@@ -923,6 +923,7 @@ font-size: 18px;
 color: #444;
 height: 189px;
 overflow-y: scroll;
+white-space: pre-wrap;
 }
 
 .exit.error {
@@ -953,6 +954,45 @@ padding-right: 70px;
 }
 
 @media(max-width: 768px) {
+
+
+    .row.example {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .row.console {
+        margin-left: 0px;
+        margin-right: 0px;
+        border: 0px;
+        background-color: transparent;
+    }
+
+    .row.console .col-xs-12:first-child{
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .row.console .col-xs-12:last-child{
+        border: 1px solid #ddd;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+
+    .title.title-right {
+        border-radius: 9px 9px 0 0;
+    }
+
+    .title.bottom {
+        border-radius: 0 0 9px 9px;
+    }
+
+    .editor {
+        border-radius: 9px;
+    }
+
+
     .row-eq-height {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;

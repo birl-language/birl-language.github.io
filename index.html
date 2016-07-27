@@ -85,7 +85,7 @@
             Entrada
           </div>
           <div class="entrance">
-            <textarea ng-model="stdin" placeholder="BIRL!"></textarea>
+            <textarea ng-model="stdin" placeholder="..."></textarea>
           </div>
           <div class="title">
             <button class="btn btn-danger btn-large" ng-click="sendBirl()" ng-disabled="disabled">{{btText}}</button>
@@ -101,7 +101,7 @@
           </div>
         </div>
       </div>
-      <div class="fb-like" data-href="https://birl-language.github.io" data-width="800" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+      <div class="fb-like" data-href="https://birl-language.github.io" data-width="800" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
   </section><!--HOME-->
 
 
@@ -258,37 +258,11 @@
       <div class="section-header">
         <h2 class="section-title text-center wow fadeInDown">Exemplo Descendente</h2>
         <p class="text-center wow fadeInDown">
-          Sai de casa codei pra caralho! Veja como programar em BIRL é bem mais treze que em C com esse somador simples:
+          Sai de casa codei pra caralho! Veja como programar em BIRL é treze memo com esse somador:
         </p>
       </div>
       <div class="row example">
-        <div class="col-xs-12 col-sm-6 title title-left">
-           C
-        </div>
-        <div class="col-xs-12 col-sm-6 title title-right">
-           BIRL
-        </div>
-        <div class="col-xs-12 col-sm-6 code code-left">
-           <span class="teal">int</span> somar(<span class="teal">int</span> a, <span class="teal">int</span> b) { <br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">return</span> a + b; <br>
-           } <br><br>
-
-           <span class="teal">int</span> main() { <br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="teal">int</span> a, b, res;<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">printf</span>("Entre com a e b: \n");<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">scanf</span>("%d %d", &a, &b);<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;res = somar(a, b);<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">printf</span>("O resultado foi %d\n", res);<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">if</span>(res == 37) {<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">printf</span>("O resultado é 37.\n");<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">else</span> { <br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">printf</span>("O resultado não é 37.\n");<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">return</span> 0; <br>
-           } <br>
-        </div>
-        <div class="col-xs-12 col-sm-6 code code-right">
+        <div class="col-xs-12 col-sm-offset-3 col-sm-6 code code-right">
            <span class="red">OH O HOME AI PO</span> (int somar(int a, int b))<br>
            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="teal">BORA CUMPADE</span> a + b;<br>
            <span class="red">BIRL</span><br><br>
@@ -338,7 +312,7 @@
                   <i class="fa fa-github"></i>
                 </a>
               </li>
-              v1.1
+              v1.2
             </ul>
           </div>
 
