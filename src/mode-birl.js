@@ -63,9 +63,7 @@ var birlHighlightRules = function() {
     );
 
     var keywordOperators = (
-        "sizeof|asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|" +
-        "_Imaginary|int|long|short|signed|struct|typedef|union|unsigned|void|" +
-        "class|wchar_t|template|char16_t|char32_t"
+        "FRANGO|MONSTRINHO|MONSTRO|MONSTRAO|TRAPEZIO|TRAPEZIO DESCENDENTE|BICEPS"
     );
 
     var builtinConstants = (
