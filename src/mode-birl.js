@@ -63,9 +63,7 @@ var birlHighlightRules = function() {
     );
 
     var keywordOperators = (
-        "sizeof|asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|" +
-        "_Imaginary|int|long|short|signed|struct|typedef|union|unsigned|void|" +
-        "class|wchar_t|template|char16_t|char32_t"
+        "FRANGO|MONSTRINHO|MONSTRO|MONSTRAO|TRAPEZIO|TRAPEZIO DESCENDENTE|BICEPS"
     );
 
     var builtinConstants = (
@@ -73,7 +71,7 @@ var birlHighlightRules = function() {
     );
     
     var bambamRegex = "(?:\\s*|)(?:AJUDA O MALUCO TA DOENTE|BIRL|HORA DO SHOW|BORA CUMPADE|ELE QUE A GENTE QUER\\?|"+
-    "NAO VAI DAR NAO|OH O HOME AI PO|NEGATIVA BAMBAM|MAIS QUERO MAIS)";
+    "NAO VAI DAR NAO|OH O HOME AI PO|NEGATIVA BAMBAM|MAIS QUERO MAIS|QUE NAO VAI DAR O QUE\\?|SAI FILHO DA PUTA|VAMO MONSTRO)";
     
     var printsBambam = "\\s*(?:CE QUER VER ESSA PORRA\\?|QUE QUE CE QUER MONSTRAO\\?)";
 

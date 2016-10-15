@@ -24,6 +24,9 @@
   <meta property="og:description"   content="Vem cumpade! Sai de casa codei pra caralho! BIRL!" />
   <meta property="og:image"         content="https://birl-language.github.io/images/birl2.png" />
 
+  <meta property="fb:admins" content="100002158398392"/>
+  <meta property="fb:admins" content="100002144931535"/>
+
   <!-- core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -82,10 +85,10 @@
             Entrada
           </div>
           <div class="entrance">
-            <textarea ng-model="stdin" placeholder="BIRL!"></textarea>
+            <textarea ng-model="stdin" placeholder="..."></textarea>
           </div>
           <div class="title">
-            <button class="btn btn-danger btn-large" ng-click="sendBirl()">Bora!</button>
+            <button class="btn btn-danger btn-large" ng-click="sendBirl()" ng-disabled="disabled">{{btText}}</button>
           </div>
           <div class="title">
             Saída
@@ -93,9 +96,12 @@
           <div class="exit" ng-class="{'error' : temErro}">
             {{stdout}}
           </div>
+          <div class="title bottom">
+            <a class="btn btn-danger btn-large" ng-href="{{ fileUrl }}" download="codigo.birl"><span class="fa fa-cloud-download"></span> Tirar da Jaula</a>
+          </div>
         </div>
       </div>
-      <div class="fb-like" data-href="https://birl-language.github.io" data-width="800" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+      <div class="fb-like" data-href="https://birl-language.github.io" data-width="800" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
   </section><!--HOME-->
 
 
@@ -123,6 +129,32 @@
           </div>
           <div class="col-xs-12 col-sm-6 col-md-6 tutorial-out">
               <div class="tutorial-box">
+                  <h3>Tipos de dados</h3>
+                  <div class="code">
+                      <p>
+                          <span class="red">FRANGO</span> FR = 'a'; <i>(char)</i><br>
+                          <span class="red">MONSTRINHO</span> M1 = 13; <i>(short)</i><br>
+                          <span class="red">MONSTRO</span> M2 = 37; <i>(int)</i><br>
+                          <span class="red">MONSTRAO</span> M3 = 666; <i>(long)</i><br>
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 tutorial-out">
+              <div class="tutorial-box">
+                  <h3>Tipos de dados</h3>
+                  <div class="code">
+                      <p>
+                          <span class="red">TRAPEZIO</span> T = 0.13; <i>(float)</i><br>
+                          <span class="red">TRAPEZIO DESCENDENTE</span> TD = 0.37; <i>(double)</i><br>
+                          <span class="red">BICEPS</span> FRANGO BF = 200; <i>(unsigned)</i><br>
+                          <br>
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 tutorial-out">
+              <div class="tutorial-box">
                   <h3>Printar na tela</h3>
                   <div class="code">
                       <p>
@@ -139,8 +171,8 @@
                   <h3>Ler da tela</h3>
                   <div class="code">
                       <p>
-                          int x;<br>
-                          <span class="red">QUE QUE CE QUER MONSTRAO?</span> ("%d", &x)<span class="red">;</span>
+                          MONSTRO X;<br>
+                          <span class="red">QUE QUE CE QUER MONSTRAO?</span> ("%d", &X)<span class="red">;</span>
                           <br>
                           <br>
                       </p>
@@ -167,7 +199,7 @@
                   <h3>If/Else</h3>
                   <div class="code">
                       <p>
-                          <span class="red">ELE QUE A GENTE QUER?</span> (x > 2)<br>
+                          <span class="red">ELE QUE A GENTE QUER?</span> (X > 2)<br>
                           <span class="comment">//caso verdadeiro</span><br>
                           <span class="red">NAO VAI DAR NAO</span><br>
                           <span class="comment">//caso falso</span><br>
@@ -179,14 +211,33 @@
           </div>
           <div class="col-xs-12 col-sm-6 col-md-6 tutorial-out">
               <div class="tutorial-box">
+                  <h3>Else if</h3>
+                  <div class="code">
+                      <p>
+                          <span class="red">ELE QUE A GENTE QUER?</span> (X > 2)<br>
+                          <span class="comment">//X > 2</span><br>
+                          <span class="red">QUE NAO VAI DAR O QUE?</span> (X < 2)<br>
+                          <span class="comment">//X < 2</span><br>
+                          <span class="red">NAO VAI DAR NAO</span><br>
+                          <span class="comment">//X = 2</span><br>
+                          <span class="red">BIRL</span>
+                          <br>
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 tutorial-out">
+              <div class="tutorial-box">
                   <h3>While</h3>
                   <div class="code">
                       <p>
-                          int x = 5;<br>
-                          <span class="red">NEGATIVA BAMBAM</span> (x > 2)<br>
+                          <br>
+                          MONSTRO X = 5;<br>
+                          <span class="red">NEGATIVA BAMBAM</span> (X > 2)<br>
                           <span class="comment">//rodar código</span><br>
-                          <span class="comment"></span>x--;<br>
+                          <span class="comment"></span>X--;<br>
                           <span class="red">BIRL</span>
+                          <br>
                           <br>
                       </p>
                   </div>
@@ -197,11 +248,30 @@
                   <h3>For</h3>
                   <div class="code">
                       <p>
-                          int i;<br>
-                          <span class="red">MAIS QUERO MAIS</span> (i = 0; i < 5; i++)<br>
-                          <span class="comment"></span>CE QUER VER ESSA PORRA? ("%d", i);<br>
+                          <br>
+                          <br>
+                          MONSTRO M;<br>
+                          <span class="red">MAIS QUERO MAIS</span> (M = 0; M < 5; M++)<br>
+                          <span class="comment"></span>CE QUER VER ESSA PORRA? ("%d", M);<br>
                           <span class="red">BIRL</span>
                           <br>
+                          <br>
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 tutorial-out">
+              <div class="tutorial-box">
+                  <h3>Break/Continue</h3>
+                  <div class="code">
+                      <p>
+                          MONSTRO M;<br>
+                          <span class="red">MAIS QUERO MAIS</span> (M = 0; M < 5; M++)<br>
+                          <span class="comment">//continue</span><br>
+                          <span class="comment"></span><span class="red">VAMO MONSTRO;</span><br>
+                          <span class="comment">//break</span><br>
+                          <span class="comment"></span><span class="red">SAI FILHO DA PUTA;</span><br>
+                          <span class="red">BIRL</span>
                           <br>
                       </p>
                   </div>
@@ -212,7 +282,7 @@
                   <h3>Declarar função</h3>
                   <div class="code">
                       <p>
-                          <span class="red">OH O HOME AI PO</span> (int nomeFunc(int a, int b))<br>
+                          <span class="red">OH O HOME AI PO</span> (MONSTRO NOMEFUNC(MONSTRO A, MONSTRO B))<br>
                           <span class="comment">//código da função</span><br>
                           <span class="comment"></span><span class="red">BORA CUMPADE</span> 1<span class="red">;</span><br>
                           <span class="red">BIRL</span>
@@ -226,9 +296,9 @@
                   <h3>Chamar função</h3>
                   <div class="code">
                       <p>
-                          int a = 5; <br>
-                          int b = 8; <br>
-                          int c = <span class="red">AJUDA O MALUCO TA DOENTE</span> somar(a, b);<br>
+                          MONSTRO A = 5; <br>
+                          MONSTRO B = 8; <br>
+                          MONSTRO C = <span class="red">AJUDA O MALUCO TA DOENTE</span> SOMAR(A, B);<br>
                           <br>
                       </p>
                   </div>
@@ -252,48 +322,22 @@
       <div class="section-header">
         <h2 class="section-title text-center wow fadeInDown">Exemplo Descendente</h2>
         <p class="text-center wow fadeInDown">
-          Sai de casa codei pra caralho! Veja como programar em BIRL é bem mais treze que em C com esse somador simples:
+          Sai de casa codei pra caralho! Veja como programar em BIRL é treze memo com esse somador:
         </p>
       </div>
       <div class="row example">
-        <div class="col-xs-12 col-sm-6 title title-left">
-           C
-        </div>
-        <div class="col-xs-12 col-sm-6 title title-right">
-           BIRL
-        </div>
-        <div class="col-xs-12 col-sm-6 code code-left">
-           <span class="teal">int</span> somar(<span class="teal">int</span> a, <span class="teal">int</span> b) { <br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">return</span> a + b; <br>
-           } <br><br>
-
-           <span class="teal">int</span> main() { <br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="teal">int</span> a, b, res;<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">printf</span>("Entre com a e b: \n");<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">scanf</span>("%d %d", &a, &b);<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;res = somar(a, b);<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">printf</span>("O resultado foi %d\n", res);<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">if</span>(res == 37) {<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">printf</span>("O resultado é 37.\n");<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">else</span> { <br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">printf</span>("O resultado não é 37.\n");<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">return</span> 0; <br>
-           } <br>
-        </div>
-        <div class="col-xs-12 col-sm-6 code code-right">
-           <span class="red">OH O HOME AI PO</span> (int somar(int a, int b))<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="teal">BORA CUMPADE</span> a + b;<br>
+        <div class="col-xs-12 col-sm-offset-3 col-sm-6 code code-right">
+           <span class="red">OH O HOME AI PO</span> (MONSTRO SOMAR(MONSTRO A, MONSTRO B))<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="teal">BORA CUMPADE</span> A + B;<br>
            <span class="red">BIRL</span><br><br>
 
            <span class="red">HORA DO SHOW</span><br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int a, b, res;<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MONSTRO A, B, RES;<br>
            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">CE QUER VER ESSA PORRA?</span> ("Entra com a e b ai cumpade!!\n");<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">QUE QUE CE QUER MONSTRAO?</span> ("%d %d", &a, &b);<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;res = <span class="red">AJUDA O MALUCO TA DOENTE</span> somar(a, b);<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">CE QUER VER ESSA PORRA?</span> ("Oh o resultado ai po: %d\n", res);<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="teal">ELE QUE A GENTE QUER?</span> (res == 37)<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">QUE QUE CE QUER MONSTRAO?</span> ("%d %d", &A, &B);<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RES = <span class="red">AJUDA O MALUCO TA DOENTE</span> SOMAR(A, B);<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">CE QUER VER ESSA PORRA?</span> ("Oh o resultado ai po: %d\n", RES);<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="teal">ELE QUE A GENTE QUER?</span> (RES == 37)<br>
            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">CE QUER VER ESSA PORRA?</span> ("É 37 anos caralho!\n");<br>
            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="teal">NAO VAI DAR NAO</span><br>
            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">CE QUER VER ESSA PORRA?</span> ("Manda o double biceps!\n");<br>
@@ -302,6 +346,18 @@
            <span class="red">BIRL</span><br>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container fb-container">
+      <div class="section-header">
+        <h2 class="section-title text-center wow fadeInDown">Galera do Canal</h2>
+        <p class="text-center wow fadeInDown">
+          Deixe seu comentário sobre esta linguagem descendente maravilhosa:
+        </p>
+      </div>
+      <div class="fb-comments" data-href="https://birl-language.github.io" data-width="600" data-numposts="5"></div>
     </div>
   </section>
 
@@ -316,10 +372,11 @@
           <div class="col-xs-2">
             <ul class="social-icons pull-right">
               <li>
-                <a href="https://github.com/BIRL-Language/BIRL">
+                <a href="https://github.com/BIRL-Language/">
                   <i class="fa fa-github"></i>
                 </a>
               </li>
+              v1.3
             </ul>
           </div>
 

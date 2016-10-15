@@ -859,6 +859,11 @@ border-bottom: 1px solid #ccc;
 
 }
 
+.title.bottom {
+    border: 0;
+    border-bottom-right-radius: 9px;
+}
+
 .code {
     padding:10px;
 padding-left: 30px;
@@ -915,7 +920,10 @@ background-color: #fff;
 .exit {
     padding: 15px;
 font-size: 18px;
-color: #666;
+color: #444;
+height: 189px;
+overflow-y: scroll;
+white-space: pre-wrap;
 }
 
 .exit.error {
@@ -930,13 +938,61 @@ font-size: 18px;
 padding: 15px;
 }
 
-.btn.btn-danger {
+.btn {
     font-size:20px;
 padding-left: 70px;
 padding-right: 70px;
 }
 
+.fb-container{
+    text-align: center;
+}
+
+.fb-comments.fb-iframe-widget{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
 @media(max-width: 768px) {
+
+
+    .row.example {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .row.console {
+        margin-left: 0px;
+        margin-right: 0px;
+        border: 0px;
+        background-color: transparent;
+    }
+
+    .row.console .col-xs-12:first-child{
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .row.console .col-xs-12:last-child{
+        border: 1px solid #ddd;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+
+    .title.title-right {
+        border-radius: 9px 9px 0 0;
+    }
+
+    .title.bottom {
+        border-radius: 0 0 9px 9px;
+    }
+
+    .editor {
+        border-radius: 9px;
+    }
+
+
     .row-eq-height {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
