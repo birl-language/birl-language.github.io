@@ -13,12 +13,12 @@ A sintaxe pode ser encontrada direto no site! Puta rolê escrever aqui também!
 Website: https://birl-language.github.io/  
 Servidor: https://github.com/birl-language/birl-server  
 
-##TO-DO
+## TO-DO
 - [ ] Melhorar o tutorial para quem nunca programou
 - [ ] Aumentar a sintaxe pra ficar o mais longe possível dessa linguagem de quem sobe em árvore (C).
 
   
-##Colaboradores  
+## Colaboradores  
   
 - **RCzera (@akafts)**
 - **Padilha Monster (@lcfpadilha)**
