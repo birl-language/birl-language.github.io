@@ -1,118 +1,44 @@
 <!DOCTYPE html>
-
-<html lang="pt_BR">
-
+<html lang="pt-BR">
 <head>
-  <meta charset="utf8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <title>BIRL - Bambam's "It's show time" Recursive Language</title>
-
-  <meta prefix="og: http://ogp.me/ns#" property='og:title' content="BIRL - Bambam's 'It's show time' Recursive Language" />
-  <meta prefix="og: http://ogp.me/ns#" property='og:type' content='website' />
-
-  <meta prefix="og: http://ogp.me/ns#" property='og:description'
-        content='Vem cumpade! Sai de casa codei pra caralho! BIRL!' />
-
-  <meta prefix="og: http://ogp.me/ns#" property='og:site_name' content='BIRL' />
-
-  <meta property="og:url"           content="https://birl-language.github.io" />
-  <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="BIRL - Bambam's 'It's show time' Recursive Language" />
-  <meta property="og:description"   content="Vem cumpade! Sai de casa codei pra caralho! BIRL!" />
-  <meta property="og:image"         content="https://birl-language.github.io/images/birl2.png" />
-
-  <meta property="fb:admins" content="100002158398392"/>
-  <meta property="fb:admins" content="100002144931535"/>
-
-  <!-- core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/animate.min.css" rel="stylesheet">
-  <link href="css/owl.carousel.css" rel="stylesheet">
-  <link href="css/owl.transitions.css" rel="stylesheet">
-  <link href="css/prettyPhoto.css" rel="stylesheet">
-  <link href="css/main.css" rel="stylesheet">
-  <link href="css/responsive.css" rel="stylesheet">
-  <link href="css/pictonic.css" rel="stylesheet">
-  <link href="css/newicons.css" rel="stylesheet">
-  <link href="css/flex-calendar.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-  <!--[if lt IE 9]>
-  <script src="js/html5shiv.js"></script>
-  <script src="js/respond.min.js"></script>
-  <![endif]-->
-  <link rel="shortcut icon" href="images/favicon.ico">
+<meta charset="utf-8">
+<script src="js/theme.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A linguagem de programação mais bodybuilder do mundo. Escreva BIRL no playground e aprenda a sintaxe, direto no navegador.">
+<title>BIRL — É hora do código.</title>
+<meta property="og:title" content="BIRL — É hora do código.">
+<meta property="og:description" content="Construa código. Construa fibra. Conheça a linguagem de programação mais bodybuilder do mundo.">
+<meta property="og:image" content="https://birl-language.github.io/images/birl2.png">
+<link rel="icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/vendor/select2.min.css">
+<link rel="stylesheet" href="css/redesign.css">
 </head>
-
-<body id="home" class="homepage" ng-app="birlWeb">
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.6&appId=362013387327951";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-
-  <section id="upcoming" ng-controller="birlCtrl">
-    <div class="container">
-      <div class="row">
-          <div class="col-xs-12 col-sm-6 col-sm-offset-3 center-wrap">
-            <div class="center-inner">
-              <img src="images/birl2.png" class="center-img">
-            </div>
-          </div>
-      </div>
-      <div class="section-header">
-        <h2 class="section-title text-center">BIRL</h2>
-        <p class="text-center birl-text">
-          O BIRL <span class="italic">(<span class="red">B</span>ambam's "<span class="red">I</span>t's show time" <span class="red">R</span>ecursive <span class="red">L</span>anguage)</span> é a linguagem de programação mais treze já inventada. <br><span class="highlight">Deve ser utilizada apenas por quem realmente constrói fibra e não é água com código. É uma linguagem extremamente simples porém com poder para derrubar todas as árvores do parque Ibirapuera. </span><br>Programando em BIRL, é verão o ano todo!
-        </p>
-      </div>
-
-      <div class="row console">
-        <div class="col-xs-12 col-sm-6 nopadding">
-          <div class="editor" ui-ace="{useWrapMode : true,showGutter: true,theme:'monokai',mode: 'birl'}" ng-model="code">
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 nopadding">
-          <div class="title title-right">
-            Entrada
-          </div>
-          <div class="entrance">
-            <textarea ng-model="stdin" placeholder="..."></textarea>
-          </div>
-          <div class="title">
-            <button class="btn btn-danger btn-large" ng-click="sendBirl()" ng-disabled="disabled">{{btText}}</button>
-          </div>
-          <div class="title">
-            Saída
-          </div>
-          <div class="exit" ng-class="{'error' : temErro}">
-            {{stdout}}
-          </div>
-          <div class="title bottom">
-            <a class="btn btn-danger btn-large" ng-href="{{ fileUrl }}" download="codigo.birl"><span class="fa fa-cloud-download"></span> Tirar da Jaula</a>
-          </div>
-        </div>
-      </div>
-      <div class="fb-like" data-href="https://birl-language.github.io" data-width="800" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
-  </section><!--HOME-->
-
-
-  <section id="about">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title text-center wow fadeInDown">CONSTRUINDO FIBRA</h2>
-            <p class="text-center wow fadeInDown">
-            </p>
-        </div>
-        <div class="row">
+<body ng-app="birlWeb" ng-controller="birlCtrl">
+<a class="skip-link" href="#playground">Pular para o editor</a>
+<header class="site-header"><div class="container nav-wrap">
+<a class="brand" href="#home" aria-label="BIRL, início">BIRL<span>.</span><span class="version">LANGUAGE / V1.3</span></a>
+<nav aria-label="Navegação principal"><a class="nav-active" href="#playground">Playground</a><a href="#about">Sintaxe</a><a href="https://github.com/BIRL-Language/" class="github-link"><i class="fa fa-github" aria-hidden="true"></i> GitHub <span aria-hidden="true">↗</span></a><button id="theme-toggle" class="theme-toggle" type="button" aria-label="Ativar modo claro" title="Ativar modo claro" aria-pressed="false"><i class="fa fa-sun-o" aria-hidden="true"></i></button></nav>
+</div></header>
+<main id="home">
+<section class="hero container" aria-labelledby="hero-title">
+<div class="hero-copy"><div class="eyebrow"><span></span> A LINGUAGEM MAIS BODYBUILDER DO MUNDO</div>
+<h1 id="hero-title">É HORA DO<br><span>CÓDIGO.</span></h1>
+<p>Não é água com código. É <strong>BIRL.</strong><br>Uma linguagem inspirada em C, feita para quem constrói fibra — e programas de verdade.</p>
+<div class="hero-actions"><a class="button primary" href="#playground">Bora programar <span aria-hidden="true">↗</span></a><a class="text-link" href="#about">Conheça a sintaxe <span aria-hidden="true">↗</span></a></div>
+<div class="hero-meta"><span><i class="fa fa-code" aria-hidden="true"></i> Sintaxe em português</span><span><i class="fa fa-github" aria-hidden="true"></i> Código aberto</span></div></div>
+<div class="hero-art"><div class="art-grid"></div><span class="art-caption">EST. 2016 / BRASIL</span><picture><source srcset="images/birl-flex-frames/frame-04.png" media="(prefers-reduced-motion: reduce)"><img src="images/birl-flex.gif" alt="Mascote BIRL levantando os braços e flexionando os bíceps" width="400" height="400"></picture><div class="art-stamp">100%<small>FIBRA</small></div><div class="art-bottom"><span>MENOS DESCULPA.</span><strong>MAIS QUERO MAIS.</strong></div></div>
+</section>
+<section id="playground" class="container playground" aria-labelledby="playground-title">
+<div class="section-heading"><div><div class="eyebrow">01 / TIRE SEU CÓDIGO DA JAULA</div><h2 id="playground-title">Seu próximo treino começa aqui<span>.</span></h2></div><span class="section-note">Escreva. Execute. BIRL.</span></div>
+<div class="workspace">
+<div class="workspace-toolbar"><div class="workspace-label"><span class="live-dot"></span> PLAYGROUND <span class="tag">.birl</span></div><div class="example-select"><label for="example">Exemplo</label><select birl-select2 id="example" ng-model="selectedExample" ng-change="loadExample()"><option value="hello">Olá, mundo</option><option value="sum">Somador monstro</option><option value="loop">Mais quero mais</option></select></div></div>
+<div class="workspace-body"><div class="editor-pane"><div class="pane-title"><span><i class="fa fa-code" aria-hidden="true"></i> codigo.birl</span><button class="quiet-button" ng-click="resetCode()" title="Restaurar o exemplo selecionado">↺ Restaurar</button></div><div class="editor" ui-ace="editorOptions" ng-model="code" aria-label="Editor de código BIRL"></div><div class="editor-footer"><span>BIRL</span><span>UTF-8 <span class="footer-divider">|</span> Tab: 4 espaços</span></div></div>
+<div class="io-pane"><div class="input-pane"><label class="pane-title" for="stdin"><span><span class="prompt-icon">↗</span> Entrada</span><span class="muted">stdin</span></label><textarea id="stdin" ng-model="stdin" placeholder="Seu programa precisa de dados? Digite aqui." spellcheck="false"></textarea><p class="input-help">Separe os valores com espaços ou quebras de linha.</p></div><div class="output-pane"><div class="pane-title"><span><span class="prompt-icon">›_</span> Saída</span><span class="status" ng-class="{'status-error': temErro}" ng-bind="disabled ? 'Executando…' : (temErro ? 'Erro' : (hasRun ? 'Concluído' : 'Pronto'))">Pronto</span></div><div class="output-empty" ng-if="!hasRun && !disabled"><span aria-hidden="true">&gt;_</span><p>O show acontece aqui.</p><small>Execute seu código para ver o resultado.</small></div><pre class="output" ng-class="{'error': temErro}" ng-show="hasRun || disabled" role="status" aria-live="polite" ng-bind="disabled ? 'Preparando o show…' : (stdout || 'Programa finalizado sem saída.')"></pre></div></div></div>
+<div class="workspace-bottom"><a class="download-link" ng-href="{{fileUrl}}" download="codigo.birl"><i class="fa fa-download" aria-hidden="true"></i> Baixar código</a><div class="run-actions"><span class="shortcut">Ctrl + Enter para executar</span><button class="button primary run-button" ng-click="sendBirl()" ng-disabled="disabled"><i class="fa" ng-class="disabled ? 'fa-spinner fa-spin' : 'fa-play'" aria-hidden="true"></i> <span ng-bind="btText">Bora! Executar</span></button></div></div>
+</div><p class="playground-note"><i class="fa fa-info-circle" aria-hidden="true"></i> A execução utiliza o servidor do projeto. Você pode baixar seu código a qualquer momento.</p>
+</section>
+<section id="about" class="container syntax-section" aria-labelledby="syntax-title"><div class="section-heading"><div><div class="eyebrow">02 / CONSTRUINDO FIBRA</div><h2 id="syntax-title">Pega a visão da sintaxe<span>.</span></h2><p>Do primeiro BIRL ao double bíceps. Tudo que você precisa para começar.</p></div><a class="text-link" href="#playground">Testar no playground ↑</a></div><div class="tutorial-grid">
           <div class="col-xs-12 tutorial-out">
               <div class="tutorial-box">
                   <h3>Início do código</h3>
@@ -304,95 +230,9 @@
                   </div>
               </div>
           </div>
-        </div>
-    </div>
-    <div class="section-header bottom-header">
-        <h2 class="section-title text-center wow fadeInDown"></h2>
-        <p class="text-center wow fadeInDown">
-          É isso ai galera do BIRL! Estamos finalizando o tutorial, acho que deu pra vocês pegarem hoje bastante informação.
-        </p>
-        <p class="text-center wow fadeInDown red">
-          Quer colaborar com o BIRL? Aumentar a linguagem? Vem cumpade! Acesse o repositório mais bodybuilder do GitHub: <a href="https://github.com/BIRL-Language/">BIRL</a>
-        </p>
-      </div>
-  </section>
-
-  <section id="operation">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title text-center wow fadeInDown">Exemplo Descendente</h2>
-        <p class="text-center wow fadeInDown">
-          Sai de casa codei pra caralho! Veja como programar em BIRL é treze memo com esse somador:
-        </p>
-      </div>
-      <div class="row example">
-        <div class="col-xs-12 col-sm-offset-3 col-sm-6 code code-right">
-           <span class="red">OH O HOME AI PO</span> (MONSTRO SOMAR(MONSTRO A, MONSTRO B))<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="teal">BORA CUMPADE</span> A + B;<br>
-           <span class="red">BIRL</span><br><br>
-
-           <span class="red">HORA DO SHOW</span><br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MONSTRO A, B, RES;<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">CE QUER VER ESSA PORRA?</span> ("Entra com a e b ai cumpade!!\n");<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">QUE QUE CE QUER MONSTRAO?</span> ("%d %d", &A, &B);<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RES = <span class="red">AJUDA O MALUCO TA DOENTE</span> SOMAR(A, B);<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">CE QUER VER ESSA PORRA?</span> ("Oh o resultado ai po: %d\n", RES);<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="teal">ELE QUE A GENTE QUER?</span> (RES == 37)<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">CE QUER VER ESSA PORRA?</span> ("É 37 anos caralho!\n");<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="teal">NAO VAI DAR NAO</span><br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">CE QUER VER ESSA PORRA?</span> ("Manda o double biceps!\n");<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="teal">BIRL</span><br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="teal">BORA CUMPADE</span> 0;<br>
-           <span class="red">BIRL</span><br>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="container fb-container">
-      <div class="section-header">
-        <h2 class="section-title text-center wow fadeInDown">Galera do Canal</h2>
-        <p class="text-center wow fadeInDown">
-          Deixe seu comentário sobre esta linguagem descendente maravilhosa:
-        </p>
-      </div>
-      <div class="fb-comments" data-href="https://birl-language.github.io" data-width="600" data-numposts="5"></div>
-    </div>
-  </section>
-
-  <footer id="footer">
-    <div id="footer_inside">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-10">
-            &copy; 2016 Padilha Monster & RCzera
-          </div>
-
-          <div class="col-xs-2">
-            <ul class="social-icons pull-right">
-              <li>
-                <a href="https://github.com/BIRL-Language/">
-                  <i class="fa fa-github"></i>
-                </a>
-              </li>
-              v1.3
-            </ul>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/angular.min.js"></script>
-  <script src="js/angular/controllers.js"></script>
-<script src="src/ace.js" type="text/javascript" charset="utf-8"></script>
-  <script src="js/ui-ace.js"></script>
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-
-
-</body>
-
-</html>
+</div></section>
+<section class="container community" id="community"><div><div class="eyebrow">FEITO PELA COMUNIDADE. COM FIBRA.</div><h2>Vem com a gente, cumpade.</h2><p>A linguagem e este site são código aberto. Traga suas ideias, reporte problemas e ajude o BIRL a crescer.</p></div><a class="button secondary" href="https://github.com/BIRL-Language/" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i> Colaborar no GitHub ↗</a></section>
+</main><footer class="container site-footer"><a class="brand" href="#home">BIRL<span>.</span></a><p>Desde 2016 · Padilha Monster &amp; RCzera<br><span>Programando em BIRL, é verão o ano todo.</span></p><a href="#home" class="text-link">Voltar ao topo ↑</a></footer>
+<script src="js/vendor/jquery.min.js"></script><script src="js/vendor/select2.min.js"></script>
+<script src="js/angular.min.js"></script><script src="src/ace.js" charset="utf-8"></script><script src="js/ui-ace.js"></script><script src="js/angular/controllers.js"></script>
+</body></html>
